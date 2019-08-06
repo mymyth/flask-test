@@ -7,7 +7,8 @@ ENV HOME_DIR="/opt/docker-sample"
 ENV FLASK_APP="app.py"
 
 # install base packages
-RUN apt-get update && apt-get install -y apt-utils python-pip git
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils python-pip git
+# RUN apt-get update && apt-get install -y apt-utils python-pip git
 
 # install flask 
 RUN pip install flask pyyaml
